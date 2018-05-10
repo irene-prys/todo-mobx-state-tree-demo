@@ -1,0 +1,9 @@
+<div class="todo-list" *mobxAutorun [ngClass]="{'hidden-element': isTodoEmpty}" [ngClass]="{'hidden-element': isTodoEmpty}">
+	<div>{{logChangeDetection()}}</div>
+	<div>
+
+		<div *ngFor="let todo of todoList">
+			<input [checked]="todo.done" (change)="todo.toggle()" type="checkbox" /> {{todo.title}}
+		</div>
+	</div>
+</div>
